@@ -1,0 +1,74 @@
+{
+  "id": 3,
+  "name": "My workflow",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "c60f9384-7ebc-475a-ac6e-ce8b3677b4b1",
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "html": "={{$json[\"html\"]}}",
+        "options": {}
+      },
+      "id": "4526f509-d16c-447a-8c1e-07dd8d516634",
+      "name": "Markdown",
+      "type": "n8n-nodes-base.markdown",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://zda-ref.nl",
+        "responseFormat": "string",
+        "dataPropertyName": "html",
+        "options": {
+          "useQueryString": false
+        }
+      },
+      "id": "aa8c8687-a689-45a8-8ab1-8a193c4831a6",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        660,
+        360
+      ]
+    }
+  ],
+  "connections": {
+    "Markdown": {
+      "main": [
+        []
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Markdown",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-08-14T21:42:19.699Z",
+  "updatedAt": "2022-08-14T21:42:19.699Z",
+  "settings": {},
+  "staticData": null,
+  "pinData": {},
+  "tags": []
+}
