@@ -40,7 +40,17 @@
       "parameters": {
         "httpMethod": "POST",
         "path": "ca059f3d-e1ab-4452-aeaf-e655669184b5",
-        "options": {}
+        "responseCode": 303,
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Location",
+                "value": "https://zda-ref.nl/contact"
+              }
+            ]
+          }
+        }
       },
       "id": "9d38c881-b3a9-42f9-bafc-a77fb88dca27",
       "name": "Webhook",
@@ -67,7 +77,7 @@
     }
   },
   "createdAt": "2022-08-14T21:06:44.920Z",
-  "updatedAt": "2022-08-14T21:23:06.617Z",
+  "updatedAt": "2022-08-15T08:22:46.510Z",
   "settings": {},
   "staticData": null,
   "pinData": {},
